@@ -1,0 +1,337 @@
+Data mining for scientific applications
+lecture 1 notes
+
+data explosion
+-automated data collection tools and mature database technology lead to  tremendous amounts of data stored in databases, data warehouses and other  information repositories
+-we are drowning in data, but starving for knowledge
+
+solution
+-data mining: extraction of interesting knowledge (rules, regularities, patterns, constraints) from data in large databases
+
+why data mining:
+-huge amounts of data
+-electronic records of our decisions:
+    -choices in the supermarket
+    -financial records
+    -our comings and goings
+    -electronic health records
+    -genetic data
+-we swipe our way through the world-every swipe is a record in a database
+-data rich, but information poor
+-lying hidden in all this data is information!
+
+data vs information
+-society produces massive amounts of data: business, science, medicine, economics, sports,...
+-potentially valuable resource
+-raw data is useless:
+    -need techniques to automatically extract information
+    -data: recorded facts
+    -information: pattens underlying the data
+
+Information is crucial
+example 1: in vitro fertilization
+given: embryos described by 60 features
+problem: selection of embryos that will survive
+data: historical records of embryos and outcome
+
+example 2: cow culling
+given: cows described by 700 features
+problem: selection of cows that should be bulled
+data: historical records and farmers' decisions
+
+what is data mining
+-extracting or "mining" knowledge from large amounts of data
+-data-driven discovery and modeling of hidden patterns (we never knew existed) in large volumes of data
+-extraction of implicit, previously unknown and unexpected, potentially useful information from data
+
+definitions of data mining:
+-extraction of interesting (non-trivial, implicit, previously unknown and potentially useful) information or patterns from data in large databases
+
+data mining is NOT:
+-data warehousing
+-deductive query processing: SQL/reporting
+-software agents
+-expert systems
+-online analytical processing (OLAP)
+-statistical analysis tool
+-data visualization
+
+data mining IS:
+-programs that detect patterns and rules in the data
+-strong patterns can be used to make non-trivial predictions on new data
+
+data mining challenges:
+1. most patterns are not interesting-we need to find subsets of patterns that are interesting
+2. patterns may be inexact or completely spurious when noisy data present
+
+How do we get around these two problems:
+Machine learning techniques:
+1 technical basis for data mining: algorithms for acquiring structural descriptions from examples
+2 methods originate from artificial intelligence, statistics, and research on databases
+3. structural descriptions represent patterns explicitly can be used to
+    -predict outcome in new situations
+    -understand and explain how prediction is derived (maybe even more important)
+
+Multidisciplinary Field of data mining:
+database technology, statistics, machine learning, visualization, artificial intelligence, pattern recognition, knowledge-based systems/acquisition, high performance computing, other disciplines
+
+History of data mining
+-emerged 1980s, flourished in 1990s
+-roots traced back along three family lines:
+    -classical statistics
+    -artificial intelligence
+    -machine learning
+
+Statistics
+-foundation of most DM technologies
+    -regression analysis, standard distribution/deviation/variance, cluster analysis, confidence intervals
+    -building blocks
+    -significant role in today's data mining-but alone is not powerful enough
+
+Artificial Intelligence
+-heuristics vs statistics
+-human-thought-like processing
+-requires vast computer processing power
+-supercomputers
+
+Machine learning
+-Union of statistics and AI
+    -blends AI heuristics with advanced statistical analysis
+-let computer programs:
+    -learn about data they study-make different decisions based on the quality of studied data
+    -using statistics for fundamental concepts and adding more advanced AI heuristics and algorithms
+
+Data mining
+-adoption of the machin learning techniques to the real world problems
+-union: statistics, AI, machine learning
+-used to find previously hidden trends or patterns
+-finding increasing acceptance in science and business areas which need to analyze large amounts of data to discover trends which could not be found otherwise
+
+Terminology
+-gold mining
+-knowledge mining from databases
+-knowledge extraction
+-data/pattern analysis
+-knowledge discovery databases or KDD
+-information harvesting
+-business intelligence
+
+KDD process:
+database -> selection, transformation -> data preparation -> training data ->
+data mining -> model, patterns -> evaluation, verification:
+    -> training data
+    -> data preparation
+    -> selection, transformation
+
+steps of a KDD process
+-learning the application domain:
+    -relevant prior knowledge and goals of application
+-creating a target data set: data selection
+-data cleaning and preprocessing: may take 60% of effort
+-data reduction and transformation:
+    -find useful features, dimensionality/variable reduction, representation
+-choosing functions of data mining
+    -summarization, classification, regression, association, clustering
+-choosing the mining algorithm(s)
+-data mining: search for patterns of interest
+-pattern evaluation and knowledge presentation
+    -visualization, transformation, removing redundant patterns, etc.
+-use and integration of discovered knowledge
+
+learning algorithms
+fundamental idea:
+learn rules/patterns/relationships automatically from data
+
+data mining tasks
+-exploratory data analysis
+-predictive modeling: classification and regression
+-descriptive modeling
+    -cluster analysis/segmentation
+-discovering patterns and rules
+    -association/dependency rules
+    -sequential patterns
+    -temporal sequences
+-deviation detection (e.g. credit card fraud)
+
+data mining tasks
+-concept/class description: characterization and discrimination
+    -generalize, summarize, and contrast data characteristics, e.g. dry vs. wet regions
+-association: correlation and causality
+    -multi-dimensional or single-dimensional association,
+        e.g. age (X, "20-20")^income(X, "60-90K") -> buys(X, "TV")
+
+data mining tasks
+classification and prediction:
+-finding models(functions) that describe and distinguish classes or concepts for future prediction
+-example: classify countries based on climate, or classify cars based on gas mileage
+-when we predict values that are numerical, these are numerical predictions
+-when we predict values that are nominal, these are classification
+-presentation:
+    -if-THEN rules, decision-tree, classification rule, neural network
+-prediction: predict some unknown or missing numerical values
+
+cluster analysis
+-class label is unknown: group data to form new classes
+    example: cluster houses to find distribution patterns
+-clustering based on the principle: maximizing the intra-class similarity and minimizing the interclass similarity
+
+Outlier analysis
+outlier: a data object that does not comply wiht the general behavior of the data
+-mostly considered as noise or exception, but is quite useful in fraud detection, rare events analysis
+
+trend and evolution analysis
+-trend and deviation: regression analysis
+-sequential pattern mining, periodicity analysis
+
+Taxonomy
+-predictive methods
+    -use some variables to predict some unknown or future values of other variables
+-descriptive methods
+    -find human-interpretable patterns that describe the data
+-supervised vs. unsupervised
+    -labeled vs. unlabeled data
+-example data sets:
+    -weka book page 9/11: the weather data set
+    -weka book page 15/16: the CPU performance data
+
+Data mining: classification schemes
+general functionality:
+    -descriptive data mining vs. predictive data mining
+different views-different classifications
+    -kinds of databases to be mined
+    -kinds of knowledge to be discovered
+    -kinds of techniques employed
+    -kinds of applications
+
+databases to be mined:
+    -relational, transactional, object-oriented, object-relational, active, spatial, time-series, text, multi-media, WWW, etc.
+
+knowledge to be mined
+    -characterization, discrimination, association, classification, clustering, trend, deviation and outlier analysis, etc.
+    -multiple/integrated functions
+    -minding at multiple levels of abstractions
+
+techniques utilized
+    - decision/regression trees, clustering, neural networks, etc.
+
+applications adapted
+    -retail, telecom, banking, DNA mining, stock market analysis, web mining
+
+data mining applications
+science: chemistry, physics, medicine
+    -biochemical analysis
+    -remote sensors on a satellite
+    -telescopes-star galaxy classification
+    -medical image analysis
+bioscience:
+    -sequence-based analysis
+    -protein structure and function prediction
+    -protein family classification
+    -microarray gene expression
+pharmaceutical companies, insurance and health care
+    -drug development
+    -identify successful medical therapies
+    -claims analysis, fraudulent behaviors
+    -medical diagnostic tools
+    -predict office visits
+financial industry, banks, businesses, e-commerce
+    -stock and investment analysis
+    -identify loyal customers vs. risky customers
+    -predict customer spending
+    -risk management
+    -sales forecasting
+retail and marketing
+    -customer buying pattern/demographics characteristics
+    -mailing campaigns
+    -market basket analysis
+    -trend analysis
+database analysis and decision support
+    -market analysis and management
+    -risk analysis and management
+    -fraud detection and management
+sports and entertainment
+astronomy
+
+data mining examples:
+-grocery store
+-NBA
+-banking and credit card scoring
+-personalization and customer profiling
+-campaign management
+-database marketing
+
+CRISP-DM methodology
+cross-industry standard process for data mining
+6 phases:
+1. business understanding
+2. data understanding
+3. data preparation
+4. modeling
+5. evaluation
+6. deployment
+
+data mining challenges
+-computation expensive to investigate all possibilities
+-dealing with noise/missing information and errors in data
+-choosing appropriate attributes/input representation
+-finding the minimal attribute space
+-finding adequate evaluation function(s)
+-extracting meaningful information
+-not overfitting
+
+are all the discovered patterns interesting?
+interestingness measures: a pattern in interesting if it is easily understood by humans, valid on new or test data with some degree of certainty, potentially useful, novel, or validates some hypothesis that a user seeks to confirm
+
+objective vs. subjective measures:
+objective: based on statistics and structures of patterns
+    -support and confidence
+subjective: based on user's belief in the data
+    -unexpectedness, novelty, action ability, etc.
+
+completeness-find ALL the interesting patterns
+    -can a data mining system find ALL the interesting patterns?
+    -association vs classification vs. clustering have different ways of finding interesting patterns
+
+can we find all and only interesting patterns?
+-optimization - search for only interesting patterns
+    -can a data mining system find only the interesting patterns?
+-approaches
+    -first generate all the patterns and then filter out the uninteresting ones
+    -mining query optimization
+
+major issues in data mining
+-mining methodology and user interaction
+    -mining different kinds of knowledge in databases
+    -incorporation of background knowledge to focus the search for patterns, define and refine data mining requests based on return calls that come from these algorithms
+    -handling noise and incomplete data
+    -pattern evaluation: the interestingness problem
+    -expression and visualization of data mining results
+
+performance and scalability
+    -efficiency of data mining algorithms
+    -parallel, distributed and incremental mining methods
+
+issues relating to the diversity of data types
+    -handling relational and complex types of data
+    -mining information from diverse databases
+
+issues related to applications and social impacts
+    -application of discovered knowledge
+        -domain-specific data mining tools
+        -intelligent query answering
+        -expert systems
+        -process control and decision making
+    -a knowledge fusion problem
+    -protection of data security, integrity and privacy
+
+    summary
+    data mining: discovering interesting patterns from large amounts of data
+    a KDD process includes data cleaning, data integration, data selection, transformation, data mining, pattern evaluation, and knowledge presentation
+
+    mining can be performed in a variety of information repositories
+
+    data mining functionalities: characterization, association, classification, clustering, outlier and trend analysis, etc.
+
+    classification of data mining systems
+
+    major issues in data mining
